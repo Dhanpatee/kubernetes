@@ -1,0 +1,23 @@
+apt-get update
+apt-get install docker.io -y
+
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+kubectl version --client -o json
+
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_1.6.2.deb  && sudo dpkg -i minikube_1.6.2.deb
+
+sudo minikube config set vm-driver none
+sudo minikube start &  
+
+
+sudo minikube status
+	host: Running
+	kubelet: Running
+	apiserver: Running
+	kubeconfig: Configured
+=====================================================================
+Jenkins Assingment
+
+https://us02web.zoom.us/rec/play/6iWHbVFn1IJWR4Ri0_bsnG9w-BUSxriogHEUeJJJGKRlJ68lHo61pARmXr4MR6orKbERZYhWA29bQbJh.12pUZvEjWArGX0aM?continueMode=true&_x_zm_rtaid=c2Iw9N6DSK-v5zQ7RLTvGA.1673402228355.594b9cef440c02683f2a4008151560ac&_x_zm_rhtaid=610
